@@ -1,4 +1,4 @@
-# Game Time Starter Kit
+# React Starter Kit
 
 To install the dependencies:
 
