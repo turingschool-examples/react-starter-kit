@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, input {
+  font-family: "Helvetica Neue", "Helvetica";
+  font-weight: 300;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.idea-item {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #BBB;
+}
+
+.idea-body {
+  padding: 1em;
+  border: 1px solid #EEE;
+}
+
+.new-idea-form {
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #EEE;
+}
+
+.new-idea-form-title {
+  width: 100%;
+  border: none;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+.new-idea-form-body {
+  width: 100%;
+  border: none;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+.idea-filter {
+  width: 100%;
+  display: block;
+  margin: 1em 0;
+  font-size: 1.2em;
+}
