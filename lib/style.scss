@@ -1,0 +1,198 @@
+$primary-color: rgb(146, 214, 222);
+$active-color: rgb(244, 220, 171);
+$input-color: lighten($primary-color, 15);
+$button-color: $primary-color;
+$sidebar-color: lighten($primary-color, 25);
+$create-idea-color: lighten($primary-color, 20);
+$idea-list-item-color: lighten($primary-color, 22);
+
+@mixin box-shadow {
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.4);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea {
+  font: menu;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+
+  background-color: $input-color;
+  border: none;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  .is-active & {
+    background-color: lighten($active-color, 10);
+  }
+}
+
+button, input[type="submit"], .button {
+  background-color: $button-color;
+  border: none;
+
+  transition: background-color 0.5s;
+
+  &:not(:last-child) {
+    margin-right: 0.5em;
+  }
+
+  &:hover {
+    background-color: darken($button-color, 10);
+
+    .is-active & {
+      background-color: darken($active-color, 20);
+
+      &:active {
+        background-color: $active-color;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  .is-active & {
+    background-color: darken($active-color, 10);
+  }
+}
+
+header {
+  margin-bottom: 1rem;
+
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.IdeaBox {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  border: 1px solid #CCC;
+}
+
+.sidebar {
+  flex-grow: 1;
+
+  padding: 1em;
+
+  background-color: $sidebar-color;
+  border-right: 1px solid #CCC;
+}
+
+.main-content {
+  flex-grow: 7;
+}
+
+.CreateIdea {
+  padding: 1em;
+  margin: 5px;
+
+  background-color: $create-idea-color;
+  border: 1px solid darken($create-idea-color, 5);
+
+  @include box-shadow;
+}
+
+.CreateIdea-title, .CreateIdea-body {
+  font-size: 1.2em;
+}
+
+.IdeasList {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid darken($sidebar-color, 10);
+}
+
+.IdeasListItem {
+  padding: 1em;
+  margin: 5px;
+
+  background-color: $idea-list-item-color;
+  border: 1px solid darken($idea-list-item-color, 5);
+
+  @include box-shadow;
+
+  &.is-active {
+    background-color: $active-color;
+    border: 1px solid darken($active-color, 5);
+  }
+}
+
+.IdeasListItem-title {
+  margin-bottom: 0.5em;
+
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.IdeasListItem-body {
+  font-weight: 300;
+}
+
+.IdeasListItem-buttons {
+  margin: 1em 0;
+  padding: 1em;
+
+  background-color: darken($idea-list-item-color, 5);
+
+  .is-active & {
+    background-color: darken($active-color, 5);
+  }
+}
+
+.ActiveIdea {
+  padding: 1em;
+}
+
+.ActiveIdea-title, .ActiveIdea-body {
+  background-color: lighten($input-color, 10);
+
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $input-color;
+  }
+
+  &:focus {
+    background-color: $active-color;
+
+    outline: none;
+  }
+}
+
+.ActiveIdea-title {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.ActiveIdea-body {
+  font-size: 1.5em;
+  min-height: 60vh;
+}
