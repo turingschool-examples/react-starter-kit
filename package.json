@@ -1,7 +1,7 @@
 {
-  "name": "react-starter-kit",
+  "name": "Number Guesser React",
   "version": "1.0.0",
-  "description": "A good enough starter kit for a React project, I guess.",
+  "description": "Number Guesser In React.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turingschool-examples/react-starter-kit.git"
+    "url": "https://github.com/kccrs/number-guesser-react"
   },
-  "author": "Steve Kinney",
+  "author": "Casey Cross",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingschool-examples/react-starter-kit/issues"
+    "url": "https://github.com/kccrs/number-guesser-react/issues"
   },
-  "homepage": "https://github.com/turingschool-examples/react-starter-kit",
+  "homepage": "https://github.com/kccrs/number-guesser-react",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.4",
@@ -34,7 +34,6 @@
     "eslint-plugin-import": "^1.8.0",
     "eslint-plugin-jsx-a11y": "^1.2.2",
     "eslint-plugin-react": "^5.1.1",
-    "jquery": "^3.1.0",
     "mocha": "^2.4.5",
     "mocha-loader": "^0.7.1",
     "node-libs-browser": "^1.0.0",
