@@ -1883,7 +1883,7 @@
 	  /**
 	   * ### .extensible
 	   *
-	   * Asserts that the target is extensible (can have new properties added to 
+	   * Asserts that the target is extensible (can have new properties added to
 	   * it).
 	   *
 	   *     var nonExtensibleObject = Object.preventExtensions({});
@@ -5156,7 +5156,7 @@
 /* 35 */
 /***/ function(module, exports) {
 
-	
+
 	/**
 	 * isArray
 	 */
@@ -5386,7 +5386,7 @@
 	 *     hasProperty('str', obj);  // true
 	 *     hasProperty('constructor', obj);  // true
 	 *     hasProperty('bar', obj);  // false
-	 *     
+	 *
 	 *     hasProperty('length', obj.str); // true
 	 *     hasProperty(1, obj.str);  // true
 	 *     hasProperty(5, obj.str);  // false
