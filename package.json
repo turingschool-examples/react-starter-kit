@@ -1,7 +1,7 @@
 {
-  "name": "react-starter-kit",
+  "name": "number-guesser-react",
   "version": "1.0.0",
-  "description": "A good enough starter kit for a React project, I guess.",
+  "description": "Recreating number guesser in react",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/turingschool-examples/react-starter-kit.git"
   },
-  "author": "Steve Kinney",
+  "author": "Paul Nguyen",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/turingschool-examples/react-starter-kit/issues"
