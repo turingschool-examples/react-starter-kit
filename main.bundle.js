@@ -8195,7 +8195,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(_Application2.default, { number: '3776' }), document.getElementById('application'));
+	(0, _reactDom.render)(_react2.default.createElement(_Application2.default, null), document.getElementById('application'));
 
 /***/ },
 /* 299 */
@@ -29422,7 +29422,7 @@
 	  _createClass(Application, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(_header2.default, null);
+	      return _react2.default.createElement(_header2.default, { number: '3776' });
 	    }
 	  }]);
 
@@ -29462,6 +29462,11 @@
 
 	  _createClass(Header, [{
 	    key: 'render',
+
+	    // constructor() {
+	    //   super();
+	    // }
+
 	    value: function render() {
 	      return React.createElement(
 	        'div',
