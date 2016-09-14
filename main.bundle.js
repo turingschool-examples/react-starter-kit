@@ -29386,7 +29386,7 @@
 /* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -29398,10 +29398,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _header = __webpack_require__(470);
-
-	var _header2 = _interopRequireDefault(_header);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29410,85 +29406,108 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Application = function (_Component) {
-	  _inherits(Application, _Component);
+	var Application = function (_React$Component) {
+	  _inherits(Application, _React$Component);
 
 	  function Application() {
 	    _classCallCheck(this, Application);
 
-	    return _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).call(this));
+	    var _this = _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).call(this));
+
+	    _this.state = {
+	      currentGuess: "",
+	      lastGuess: null,
+	      min: 1,
+	      max: 100,
+	      randomNumber: "",
+	      feedback: "",
+	      enableButton: false
+	    };
+	    _this.generateRandomNumber = _this.generateRandomNumber.bind(_this);
+	    _this.feedback = _this.feedback.bind(_this);
+	    _this.guessButtonClick = _this.guessButtonClick.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Application, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_header2.default, { number: '3776' });
+	    key: "generateRandomNumber",
+	    value: function generateRandomNumber() {
+	      var randomNumber = Math.floor(Math.random() * (this.state.max - this.state.min) + this.state.min);
+	      this.setState({
+	        randomNumber: randomNumber
+	      });
 	    }
-	  }]);
-
-	  return Application;
-	}(_react.Component);
-
-	exports.default = Application;
-
-/***/ },
-/* 470 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(299);
-
-	var Header = function (_React$Component) {
-	  _inherits(Header, _React$Component);
-
-	  function Header() {
-	    _classCallCheck(this, Header);
-
-	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-	  }
-
-	  _createClass(Header, [{
-	    key: 'render',
-
-	    // constructor() {
-	    //   super();
-	    // }
-
+	  }, {
+	    key: "componentWillMount",
+	    value: function componentWillMount() {
+	      this.generateRandomNumber();
+	    }
+	  }, {
+	    key: "feedback",
+	    value: function feedback() {
+	      if (this.state.lastGuess > this.state.randomNumber) {
+	        this.setState({ feedback: "Sorry, that guess is too high. Try a lower number." });
+	      }
+	      if (this.state.lastGuess < this.state.randomNumber) {
+	        this.setState({ feedback: "Sorry, that guess is too low. Try a higher number." });
+	      }
+	    }
+	  }, {
+	    key: "guessButtonClick",
+	    value: function guessButtonClick() {
+	      this.setState({ lastGuess: this.state.currentGuess });
+	      this.feedback();
+	    }
+	  }, {
+	    key: "render",
 	    value: function render() {
-	      return React.createElement(
-	        'div',
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        "section",
 	        null,
-	        React.createElement(
-	          'h1',
-	          null,
-	          'Hello Header'
+	        _react2.default.createElement(
+	          "h1",
+	          { className: "last-guess-message" },
+	          "Your last guess was"
 	        ),
-	        React.createElement(
-	          'span',
-	          null,
-	          this.props.number
+	        _react2.default.createElement(
+	          "h2",
+	          { className: "lastGuess" },
+	          this.state.lastGuess
+	        ),
+	        _react2.default.createElement(
+	          "h3",
+	          { className: "feedback" },
+	          this.state.feeback
+	        ),
+	        _react2.default.createElement("input", { className: "userGuess", type: "number", placeholder: "Enter your guess" }),
+	        _react2.default.createElement(
+	          "button",
+	          { className: "guessButton", onClick: function onClick() {
+	              return _this2.guessButtonClick();
+	            } },
+	          "Guess"
+	        ),
+	        _react2.default.createElement(
+	          "button",
+	          { className: "clearButton" },
+	          "Clear"
+	        ),
+	        _react2.default.createElement(
+	          "button",
+	          { className: "resetButton" },
+	          "Reset"
 	        )
 	      );
 	    }
 	  }]);
 
-	  return Header;
-	}(React.Component);
+	  return Application;
+	}(_react2.default.Component);
 
-	exports.default = Header;
+	exports.default = Application;
+	;
 
 /***/ }
 /******/ ]);
