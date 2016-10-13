@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'cheap-eval-source-map',
   entry: {
     main: ['babel-polyfill', './lib/index.js'],
     test: ['babel-polyfill', 'mocha!./test/index.js'],
@@ -12,13 +13,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-        },
+        loaders: ['babel'],
       },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.scss$/, loader: 'style!css!sass' },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
     ],
   },
   resolve: {
