@@ -14,8 +14,14 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loaders: ['babel'],
       },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.scss$/, loader: 'style!css!sass' },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
     ],
   },
   resolve: {
