@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'cheap-eval-source-map',
   entry: {
     main: ['babel-polyfill', './lib/index.js'],
     test: ['babel-polyfill', 'mocha!./test/index.js'],
