@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import HeaderSection from './HeaderSection.jsx'
+import InputSection from './InputSection.jsx'
 
 export default class Application extends React.Component {
   render() {
@@ -10,7 +11,7 @@ export default class Application extends React.Component {
           <HeaderSection word1='Number' word2='Guesser'/>
         </header>
         <section className='InputSection'>
-          {/* <InputSection /> */}
+          <InputSection />
         </section>
         <section className='DisplaySection'>
           {/* <DisplaySection /> */}
