@@ -5,7 +5,15 @@ export default class InputSection extends React.Component {
   render() {
     return(
       <div>
-        <p>test test test</p>
+        <input
+          className='input-feild'
+          placeholder='Enter Your Guess'></input>
+        <button
+          className='guess-button'>Guess</button>
+        <button
+          className='clear-button'>Clear</button>
+          <button
+            className='reset-button'>Reset</button>
       </div>
     )
   }
