@@ -6,8 +6,8 @@ export default class Application extends React.Component {
   render() {
     return(
       <div>
-        <header className='HeaderSection'> {this.props.number}
-          <HeaderSection />
+        <header className='HeaderSection'>
+          <HeaderSection word1='Number' word2='Guesser'/>
         </header>
         <section className='InputSection'>
           {/* <InputSection /> */}

@@ -5,7 +5,7 @@ export default class HeaderSection extends React.Component {
   render() {
     return(
       <div>
-  <h1>test</h1>
+        <p>{this.props.word1} {this.props.word2}</p>
       </div>
     )
   }
