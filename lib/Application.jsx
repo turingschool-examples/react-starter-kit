@@ -17,9 +17,6 @@ export default class Application extends React.Component {
         <section className='DisplaySection'>
           <DisplaySection />
         </section>
-        <section className='ResetSection'>
-          {/* <ResetSection /> */}
-        </section>
       </div>
     )
   }
