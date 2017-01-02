@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import HeaderSection from './HeaderSection.jsx'
 import InputSection from './InputSection.jsx'
+import DisplaySection from './DisplaySection.jsx'
 
 export default class Application extends React.Component {
   render() {
@@ -14,7 +15,7 @@ export default class Application extends React.Component {
           <InputSection />
         </section>
         <section className='DisplaySection'>
-          {/* <DisplaySection /> */}
+          <DisplaySection />
         </section>
         <section className='ResetSection'>
           {/* <ResetSection /> */}
