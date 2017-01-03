@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 export default class Button extends React.Component {
-  render() {
+
+  render(text, onClick) {
     return(
       <div>
         <button
-          className='guess-button'>Guess</button>
-        <button
-          className='clear-button'>Clear</button>
-          <button
-            className='reset-button'>Reset</button>
+          onClick={this.props.onClick}>{this.props.text}</button>
       </div>
     )
   }
