@@ -1,0 +1,31 @@
+.Story {
+  display: flex;
+  min-width: 49%;
+  max-width: 49%;
+  height: 250px;
+  border: 2px solid ghostwhite;
+  margin-top: 20px;
+}
+
+.Story img {
+  width: 175px;
+}
+
+.story-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 15px;
+}
+
+.story-info h3 {
+  letter-spacing: 1px;
+  margin: 5px;
+}
+
+.story-info p {
+  font-weight: lighter;
+  line-height: 150%;
+  margin: 0;
+}

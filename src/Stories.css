@@ -1,0 +1,22 @@
+.Stories {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid ghostwhite;
+}
+
+.stories-header a {
+  text-align: right;
+}
+
+.stories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

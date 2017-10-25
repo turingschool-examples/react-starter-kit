@@ -1,7 +1,7 @@
 module.exports = {
   devtool: '#source-map',
   entry: {
-    main: ['babel-polyfill', './lib/index.js'],
+    main: ['babel-polyfill', './src/index.js'],
     test: ['babel-polyfill', 'mocha!./test/index.js'],
   },
   output: {

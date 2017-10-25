@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid ghostwhite;
+  padding: 20px;
+  margin: auto;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: lightseagreen;
+  width: 20%;
+}
+
+a:hover {
+  color: turquoise;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0;
+}

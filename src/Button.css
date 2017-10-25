@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  border: 1px solid #2d2d2d;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 90px;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+.button:hover {
+  box-shadow: 5px 5px 10px gainsboro;
+}
+
+.dark {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.light {
+  color: #2d2d2d;
+}
