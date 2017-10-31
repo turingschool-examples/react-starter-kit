@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Controls from './Controls';
 import apiResponse from './apiResponse';
 
 export default function App () {
@@ -15,6 +16,8 @@ export default function App () {
     <div>
       <h1>App Title</h1>
 
+      <Controls />
+      
       {
         cleanData.map( (trivia, index) => {
           return (
