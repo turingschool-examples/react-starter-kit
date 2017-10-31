@@ -14,15 +14,21 @@ export default class App extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      list: cleanData
+    };
+
+    this.filterData = this.filterData.bind(this)
   }
 
   filterData(filter) {
     const filteredData = cleanData.filter( (trivia) => {
-      return trivia.question.includes( filter );
+      return trivia.question.toLowerCase().includes( filter );
     } );
 
-    return filteredData;
+    this.setState({
+      list: filteredData
+    })
   }
 
   render() {
@@ -30,10 +36,10 @@ export default class App extends React.Component {
       <div>
         <h1>App Title</h1>
 
-        <Controls />
+        <Controls filterFunction={this.filterData} tempProp="asdf"/>
         
         {
-          cleanData.map( (trivia, index) => {
+          this.state.list.map( (trivia, index) => {
             return (
               <Card 
                 key={index} 

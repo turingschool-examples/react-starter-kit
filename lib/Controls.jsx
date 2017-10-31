@@ -13,6 +13,8 @@ export default class Controls extends React.Component {
     this.setState({
       inputVal: event.target.value
     })
+
+    this.props.filterFunction(event.target.value);
   }
 
   render () {
