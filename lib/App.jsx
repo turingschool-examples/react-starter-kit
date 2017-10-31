@@ -1,14 +1,22 @@
 import React from 'react';
 import Card from './Card';
-import fakeData from './fakeData';
+import apiResponse from './apiResponse';
 
 export default function App () {
+  const cleanData = apiResponse.results.map( (trivia) => {
+    return {
+      question: trivia.question,
+      answer: trivia.correct_answer
+    }
+  } )
+
+
   return (
     <div>
       <h1>App Title</h1>
 
       {
-        fakeData.map( (trivia, index) => {
+        cleanData.map( (trivia, index) => {
           return (
             <Card 
               key={index} 
