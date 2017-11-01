@@ -24,7 +24,7 @@ export default class Card extends React.Component {
       <div className="card" onClick={ this.toggleQA } >
         { 
           this.state.showQuestion && 
-          <div> 
+          <div className="question"> 
             Question: {this.props.question} 
           </div>
         }

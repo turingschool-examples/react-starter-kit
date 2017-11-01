@@ -34,7 +34,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>App Title</h1>
+        <h1 className="title">App Title</h1>
 
         <Controls filterFunction={this.filterData} tempProp="asdf"/>
         
