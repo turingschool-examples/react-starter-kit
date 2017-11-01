@@ -22,6 +22,8 @@ export default class Card extends React.Component {
   render () {
     return (
       <div className="card" onClick={ this.toggleQA } >
+        <div className="index" > {this.props.index} </div>
+
         { 
           this.state.showQuestion && 
           <div className="question"> 

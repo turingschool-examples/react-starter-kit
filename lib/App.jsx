@@ -43,6 +43,7 @@ export default class App extends React.Component {
             return (
               <Card 
                 key={index} 
+                index={index}
                 question={trivia.question} 
                 answer={trivia.answer}
               />

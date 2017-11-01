@@ -21,7 +21,6 @@ describe('Card', () => {
     expect( card.state('showQuestion') ).toEqual(false);
     expect( card.find('.answer').length ).toEqual(1);
 
-    console.log(card.debug())
   })
 
   it('should render passed in question and answer', () => {
@@ -31,4 +30,13 @@ describe('Card', () => {
     // use props to replace question in the following line
     expect(questionText).toEqual('Question: ' + card.instance().props.question)
   });
+
+  it('should render passed in index', () => {
+    const card = shallow(<Card index={1}/>);
+
+    // find the index
+
+    // expect index to equal 1
+  });
+
 })
