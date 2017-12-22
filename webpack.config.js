@@ -30,4 +30,3 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.json', '.scss', '.css'],
   }
 }
-};
