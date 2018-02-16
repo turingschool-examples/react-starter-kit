@@ -43,7 +43,7 @@ The React static comp is designed to get you comfortable with basic React princi
 
 ### Cloning Medium
 ![static comp design](https://i.imgur.com/8eQr70q.png)
-You can gather ideas for the responsive design based on [Medium's website](https://medium.com/).
+You can gather ideas for the responsive design based on [Medium's website](https://web.archive.org/web/20170911122145/https://medium.com/).
 
 ### Static Comp Learning Goals
 - Begin to understand rendering in React
