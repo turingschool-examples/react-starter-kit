@@ -1,16 +1,20 @@
 # React Starter Kit
 
-To install the dependencies:
+## Setup
 
-```
-npm install
-```
+#### Clone down this repo
+`git clone https://github.com/turingschool-examples/react-starter-kit/`
 
-To fire up a development server:
+#### Checkout the static-comp branch
+`git checkout react-static-comp`
 
-```
-npm start
-```
+#### Install the dependencies:
+
+`npm install`
+
+#### Fire up a development server:
+
+`npm start`
 
 Once the server is running, you can visit:
 
