@@ -11,11 +11,11 @@ const Stories = (props) => {
       </div>
       <div className='stories-grid'>
         {
-          props.stories.map( (story, index) => {
+          props.stories.map( (story, i) => {
             console.log(story);
             // INSTEAD OF returning the div below, return a Story component
             // Be sure to pass down the correct props!
-            return (<div>{story.title}</div>)
+            return (<div key={`stories${i}`}>{story.title}</div>)
           })
         }
       </div>
