@@ -34,20 +34,13 @@ The React static comp is designed to get you comfortable with basic React princi
   - You will need to write them yourself ...
   - including editing the `index.html` to include the proper meta tags
 
-### Base Requirements
+### Goals
 - Basic React site set up with provided repo
 - Create a repo on github :octocat: for your work with following naming construct: `[initials]-react-static-comp`
   - (i.e. `lk-react-static-comp`)
-- Include a README with the repo that provides
-  * a brief overview of the project
-  * images of both the original comp and your version
-  * a reflection on what was challenging, any lightbulb moments you had, and your biggest takeaways
 - Stretch goal: Comp should be fully responsive
 - Stretch goal: Push your final work to github pages (you will have to run a build and push the main.bundle.js file to github)
 
-
-### Additional Requirements
-- This challenge will be a part of your mod 2 portfolio
 
 ### Cloning Medium
 ![static comp design](https://i.imgur.com/8eQr70q.png)
