@@ -3,14 +3,13 @@
 
 ## Abstract
 
-You know hardly anything about React just yet. That's ok!! The static comp will help you get some basic muscle memory and practice rendering comonents to the DOM.
-
-In this exercise, you'll be copying the UI of [Medium](https://medium.com):
+In this exercise, you'll be making a copy of the UI for [Medium](https://medium.com) that looks like this: 
 
 ![static comp design](https://i.imgur.com/8eQr70q.png)
 
 
-All of the required assets and necessary components are provided in the repo. We have left comments throughout each component to guide you in the right direction for what kind of code to write. You are tasked with:
+
+This exercise will help you get some basic muscle memory and practice rendering comonents to the DOM. All of the required assets and necessary components are provided in the repo. We have left comments throughout each component to guide you in the right direction for what kind of code to write. You are tasked with:
 
 * writing JSX
 * rendering components
